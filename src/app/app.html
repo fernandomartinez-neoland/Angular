@@ -3,5 +3,12 @@
   <input type="text" name="titulo" [ngModel]="input()" (ngModelChange)="newTitle($event)">
   <button >Enviar</button>
 </form>
+<!-- listas -->
+@for (item of peticion(); track item.nombre) {
+  <li>{{ item.nombre }}</li>
+} @empty {
+  <li>There are no items.</li>
+}
+<!-- <b>{{peticion()}}</b> -->
 
 <nombre></nombre>
